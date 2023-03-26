@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link rel="stylesheet" href="style.css">
-    <title>Snake Game - Nokia 3310</title>
-</head>
-
-<body>
-    <h1>Snake Game - Nokia edition</h1>
-    <div class="scoreDisplay"></div>
-    <div class="grid"></div>
-    <div class="button">
-        <button class="top">top</button>
-        <button class="bottom">bottom</button>
-        <button class="left">left</button>
-        <button class="right">right</button>
-    </div>
-    <div class="popup">
-        <button class="playAgain">play Again</button>
-    </div>
-    <script src="script.js"></script>
-</body>
-
+    <title>Snake Game</title>
+    <style>
+      canvas {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <br>
+    <button id="newgame" onclick="startGame()">New Game</button>
+    <br>
+    <span id="score">Score: 0</span>
+  </body>
+  <script src="script.js"></script>
 </html>

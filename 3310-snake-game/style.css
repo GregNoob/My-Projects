@@ -1,44 +1,55 @@
-/* General style */
 body {
-    background-color: rgb(212, 211, 211);
-};
+  background-color: #121212;
+}
 
-/* Grid style */
-.grid {
-    width: 200px;
-    height: 200px;
-    border: 2px solid red;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-};
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 900;
+  margin-top: 50px;
+  text-shadow: 0 0 10px #fff;
+}
 
-.grid div {
-    width: 20px;
-    height: 20px;
-    /*border:1px black solid;
-    box-sizing:border-box*/
-};
+.container {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-/* Snake & apple style */
-.snake {
-    background: blue;
-};
+#canvas {
+  background-color: #fff;
+  border: 5px solid #121212;
+  border-radius: 10px;
+  margin-top: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
-.apple {
-    background-color: yellowgreen;
-    border-radius: 20px;
-};
+#score {
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 20px;
+  text-shadow: 0 0 5px #000;
+}
 
-/* Popup style */
-.popup {
-    background: rgb(32, 31, 31);
-    width: 100px;
-    height: 100px;
-    position: fixed;
-    top: 100px;
-    left: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-};
+.button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #121212;
+  font-size: 24px;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+  background-color: #121212;
+  color: #fff;
+}
