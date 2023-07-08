@@ -33,7 +33,7 @@ $(document).ready(function ($) {
     });
 
     $.ajax({
-        url: "http://localhost:3002/users",
+        url: "http://localhost:3302/users",
         method: "GET",
         headers: { "Access-Control-Allow-Origin": "*" },
         dataType: 'json',
