@@ -7,23 +7,20 @@
   body {
     width: 100vw;
     min-height: 100vh;
-    position: relative;
     display: grid;
     place-items: center;
   }
   
   .countdown {
-    width: 100%;
-    height: 100%;
     display: none;
-    place-items: center;
     color: green;
     font-size: 10rem;
     font-weight: 900;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    inset: 0 0 0 0;
+    inset: 0;
     z-index: 10000;
+    place-items: center;
   }
   
   .screen-recorder {
@@ -32,45 +29,62 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    max-width: 1000px;
+    padding: 2rem;
     background-color: #f7fafc;
     color: #202020;
-  
-   h1 {
-      text-transform: capitalize;
-      font-size: 4rem;
-      font-weight: bold;
-      color: #202020;
-   }
-  
-    video {
-      width: 782px;
-      max-height: 440px;
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2),
-        -4px -4px 10px rgba(0, 0, 0, 0.2);
-   }
   }
-  
+
+  .screen-recorder video {
+    width: 100%;
+    max-width: 782px;
+    max-height: 440px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    text-transform: capitalize;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #202020;
+  }
+
   .btn {
     background-color: #428bca;
     color: #fff;
-    font-weight: bold;
+    font-weight: 900;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
-    transition: background-color 0.3s ease;
-    border: 1px solid #428bca;
     cursor: pointer;
     text-transform: capitalize;
-    font-weight: 900;
-  
-   &:hover {
-   background-color: #357ec7;
-   }
+    border: 1px solid #428bca;
+    transition: background-color 0.3s ease;
   }
-  
+
+  .btm:hover {
+    background-color: #357ec7;
+  }
+
   a {
     text-decoration: none;
     margin-inline-start: 20px;
   }
+
+  @media (max-width: 768px) {
+    .screen-recorder video {
+      width: 100%;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+
+  }
+
