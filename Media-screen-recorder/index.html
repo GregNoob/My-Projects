@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-    <title>Media Screen Recorder</title>
+    <title>Screen Recorder</title>
   </head>
   <body>
-    <p class="countdown" id="countdown"></p>
+    <div class="countdown" id="countdown"></div>
 
     <div class="screen-recorder">
-      <h1>Capture your screen</h1>
-      <video controls preload="metadata" id="video"></video>
+      <h1>Capture your media screen</h1>
+      <video controls preload="none" id="video"></video>
 
-      <div>
-        <button type="button" class="btn" id="btn">Record</button>
-        <a href="" class="btn" id="link">Download Video</a>
-      </div>
+      <nav>
+        <button type="button" class="btn" id="btn" aria-label="Start recording">Record</button>
+        <a href="#" class="btn" id="link" aria-label="Download recorded video" download="recording.webm">Download Video</a>
+      </nav>
     </div>
   </body>
 </html>
