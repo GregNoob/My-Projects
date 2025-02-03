@@ -1,90 +1,107 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    width: 100vw;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-  }
-  
-  .countdown {
-    display: none;
-    color: green;
-    font-size: 10rem;
-    font-weight: 900;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    inset: 0;
-    z-index: 10000;
-    place-items: center;
-  }
-  
-  .screen-recorder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    width: 90%;
-    max-width: 1000px;
-    padding: 2rem;
-    background-color: #f7fafc;
-    color: #202020;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #f4f4f4;
+}
+
+.countdown {
+  visibility: hidden; /* Hidden by default */
+  color: green;
+  font-size: 10rem;
+  font-weight: 900;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  position: fixed; /* Cover the entire screen */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000; /* Ensure it's on top */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen-recorder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 90%;
+  max-width: 1000px;
+  padding: 2rem;
+  background-color: #fff;
+  color: #202020;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.screen-recorder video {
+  width: 100%;
+  max-width: 782px;
+  aspect-ratio: 16 / 9;
+  max-height: 440px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: none; /* Hide video initially */
+}
+
+h1 {
+  text-transform: capitalize;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #202020;
+}
+
+.btn {
+  background-color: #428bca;
+  color: #fff;
+  font-weight: 900;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  border: 1px solid #428bca;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #357ec7;
+  outline: 2px solid #357ec7;
+  outline-offset: 2px;
+}
+
+a {
+  text-decoration: none;
+  margin-inline-start: 20px;
+  display: none; /* Hide download link initially */
+}
+
+@media (max-width: 768px) {
   .screen-recorder video {
-    width: 100%;
-    max-width: 782px;
-    max-height: 440px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      height: auto;
   }
 
   h1 {
-    text-transform: capitalize;
-    font-size: 3rem;
-    font-weight: bold;
-    color: #202020;
+      font-size: 2.5rem;
   }
 
   .btn {
-    background-color: #428bca;
-    color: #fff;
-    font-weight: 900;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    text-transform: capitalize;
-    border: 1px solid #428bca;
-    transition: background-color 0.3s ease;
-  }
-
-  .btm:hover {
-    background-color: #357ec7;
-  }
-
-  a {
-    text-decoration: none;
-    margin-inline-start: 20px;
-  }
-
-  @media (max-width: 768px) {
-    .screen-recorder video {
-      width: 100%;
-      height: auto;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-    }
-
-    .btn {
       padding: 0.5rem 1rem;
       font-size: 1rem;
-    }
-
   }
 
+  .countdown {
+      font-size: 6rem;
+  }
+}
